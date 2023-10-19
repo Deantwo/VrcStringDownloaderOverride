@@ -3,7 +3,7 @@ A program used to override the result of VRChat's String Downloader function. Th
 
 To the best of my knowlage, this doesn't break any of VRChat's rules since it doesn't affect the VRChat client in anyway. All this program does is make your computer redirect VRChat's web request to `localhost` and then pretent to be the intended webserver. This can be done in a lot of other ways, such as with web-proxies or some special router settings, but this is the method I knew the most about.
 
-The program does request Admin privileges to run, because the programs alters your computer's `host` file and has to run a HTTP listener with custom SSL certificates. See the Uninstall instrustions below for details on how to get rid of the created certificates and `host` file enties.
+The program does request Admin privileges to run, because the programs alters your computer's `hosts` file and has to run a HTTP listener with custom SSL certificates. See the Uninstall instrustions below for details on how to get rid of the created certificates and `hosts` file enties.
 
 If you don't trust me and can't read&complie the code yourself, just leave and don't worry about this. This program will hopefully stop being useful once VRChat world creators learn to fix this issue in their worlds.
 
