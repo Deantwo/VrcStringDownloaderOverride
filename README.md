@@ -61,6 +61,7 @@ Having this remain on your computer shouldn't cause any issues, unless you happe
 
 ### Certificates
 Having the certificates remain on your computer after you are done using the program should cause you no issues. They are self-signed by your computer and no one else has them or uses them. You can delete them without issue, but deleting other certificates from your computer could cause issues for you.
+* Open the `certlm.msc` application, this will allow you to find the certificates installed on your local computer
 * The self-signed CA certificate with subject "CN = VRChat String Downloader Override CA" is stored in the `Local Computer\Trusted Root Certifiation Authorities\Certificates` folder
 * The SSL certificates with subject "CN = VRChat String Downloader Override SSL" are stored in the `Local Computer\Personal\Certificates` folder
 
@@ -76,7 +77,7 @@ A simple example:
 * What the **VRChat String Downloader Override** program does is simply replace the downloaded string from `pastebin.com` with whatever you want it to be
 
 ## Mitigation
-First of all, don't have important information be downloaded using the String Downloader function. If you have a list of players with admin/moderator privileges in your world, you should hardcoded in your your world. If the list of privileged players is hardcoded, no one can see it or edit it without literally breaking VRChat rules. Hopefully the list of players that need these super special privileges doesn't change too often.
+First of all, don't have important information be downloaded using the String Downloader function. If you have a list of players that you want to give super special (admin/moderator) privileges in your world, or data that is required for your world to function, you should hardcode it in your world. If the string is hardcoded in your world, no one can see it or edit it without literally breaking VRChat rules. Hopefully this string doesn't change too often, but if it does let's look at security.
 
-For lists of players that might change more often than you want to re-upload your world, such as for patrons, you might want to use the String Downloader function. But if you want this to be secure, you will need at least a minimum of security. In network security, the simplest way to ensure that the source of a message is from who you think it is from, is with a [Message authentication code (MAC)](https://en.wikipedia.org/wiki/Message_authentication_code). wikipedia explains it nicely, so I won't go into too much detail, but simply put it works like this:
+For lists of players that might change more often than you want to re-upload your world such as for patrons, or dynamic data that makes your world function, you might want to use the String Downloader function. But if you want this to be secure, you will need at least a minimum of security. In network security, the simplest way to ensure that the source of a message is from who you think it is from, is with a [Message Authentication Code (MAC)](https://en.wikipedia.org/wiki/Message_authentication_code). Wikipedia explains it nicely, so I won't go into too much detail here, but simply put it works like this:
 * WIP
