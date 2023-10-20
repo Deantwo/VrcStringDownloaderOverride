@@ -28,7 +28,7 @@ If you are a world creator worried about this program or before mentioned vulner
 * Return to **VRChat**
 * Rejoin the desired world
 * Check the log list in the **VRChat String Downloader Override** program to see if it received the webrequests
-* Check if the world was affacted by your changed string and have fun
+* Check if the world was affected by your changed string and have fun
 
 The created pages can be saved and loaded for later re-use.
 * Click the menu strip option: *Pages* -> *Save Pages*
@@ -36,7 +36,7 @@ The created pages can be saved and loaded for later re-use.
 * Click the menu strip option: *Pages* -> *Load Pages*
   * This will allow you to load pages from a file
 
-If the world uses the String Downloader function with URLs that aren't part of VRChat's list of trusted URL; `"*.github.io", "pastebin.com", "gist.githubusercontent.com"`, then a custom SSL certificate will need to be made to include those hostnames.
+If the world uses the String Downloader function with URLs that aren't part of VRChat's list of trusted URL; `"*.github.io", "pastebin.com", "gist.githubusercontent.com"`, then a custom SSL certificate will need to be made to include those DNS names.
 * Create the pages and enter the desired URLs on them
 * Click the menu strip option: *Certificate* -> *Create SSL for Custom URLs*
 
@@ -62,7 +62,7 @@ Having this remain on your computer shouldn't cause any issues, unless you happe
 ### Certificates
 Having the certificates remain on your computer after you are done using the program should cause you no issues. They are self-signed by your computer and no one else has them or uses them. You can delete them without issue, but deleting other certificates from your computer could cause issues for you.
 * Open the `certlm.msc` application, this will allow you to find the certificates installed on your local computer
-* The self-signed CA certificate with subject "CN = VRChat String Downloader Override CA" is stored in the `Local Computer\Trusted Root Certifiation Authorities\Certificates` folder
+* The self-signed CA certificate with subject "CN = VRChat String Downloader Override CA" is stored in the `Local Computer\Trusted Root Certification Authorities\Certificates` folder
 * The SSL certificates with subject "CN = VRChat String Downloader Override SSL" are stored in the `Local Computer\Personal\Certificates` folder
 
 ## Vulnerability
