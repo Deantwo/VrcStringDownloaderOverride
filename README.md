@@ -36,9 +36,9 @@ The created pages can be saved and loaded for later re-use.
 * Click the menu strip option: *Pages* -> *Load Pages*
   * This will allow you to load pages from a file
 
-If the String Downloader function uses URLs that aren't part of VRChat's list of trusted URL, then a custom SSL certificate will need to be made to include those hostnames.
+If the world uses the String Downloader function with URLs that aren't part of VRChat's list of trusted URL; `"*.github.io", "pastebin.com", "gist.githubusercontent.com"`, then a custom SSL certificate will need to be made to include those hostnames.
 * Create the pages and enter the desired URLs on them
-* Click the menu strip option: *Certificates* -> *Create new Custom SSL*
+* Click the menu strip option: *Certificate* -> *Create SSL for Custom URLs*
 
 ## Example world
 I made an example world where you can test this vulnerability.
@@ -51,7 +51,7 @@ In case your want to delete everything this program has done or made on your com
 The program should clean up this on its own whenever you start it or close it. But in case of improper shutdown some changes could remain and cause issues.
 * Start **Notepad** as administrator
 * Open the `C:\Windows\System32\drivers\etc\hosts` file
-* Check for any entries that end in "# VrcStringDownloaderOverride" and delete them
+* Check for any entries that end with "# VrcStringDownloaderOverride" and delete them
 * Save the file
 
 ### `netsh http` setting
