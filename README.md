@@ -1,13 +1,13 @@
 # VRChat String Downloader Override
 A program used to override the result of VRChat's String Downloader function. This is fairly simple if you know any web development. It allows for exploiting a vulnerability that most VRChat world creator don't seem to know about or care about.
 
-To the best of my knowlage, this doesn't break any of VRChat's rules since it doesn't affect the VRChat client in anyway. All this program does is make your computer redirect VRChat's web request to `localhost` and then pretent to be the intended webserver. This can be done in a lot of other ways, such as with a http-proxy or some special router settings, but this is the method I knew the most about.
+To the best of my knowledge, this doesn't break any of VRChat's rules since it doesn't affect the VRChat client in anyway. All this program does is make your computer redirect VRChat's web request to `localhost` and then pretent to be the intended webserver. This can be done in a lot of other ways, such as with a http-proxy or some special router settings, but this is the method I knew the most about.
 
-The program does request Admin privileges to run, because the programs alters your computer's `hosts` file and has to run a HTTP listener with self-signed SSL certificates. See the Uninstall instrustions below for details on how to get rid of the created certificates and `hosts` file enties.
+The program does request Admin privileges to run, because the programs alters your computer's `hosts` file and has to run a HTTP listener with self-signed SSL certificates. See the Uninstall instructions below for details on how to get rid of the created certificates and `hosts` file entries.
 
-If you don't trust me and can't read&complie the code yourself, just leave and don't worry about this. This program will hopefully stop being useful once VRChat world creators learn to fix this vulnerability in their worlds.
+If you don't trust me and can't read&compile the code yourself, just leave and don't worry about this. This program will hopefully stop being useful once VRChat world creators learn to fix this vulnerability in their worlds.
 
-If you are a world creator worried about this program or before mentioned vulnerability, check the Mitigation section below.
+If you are a world creator worried about this program or before mentioned vulnerability, check the Vulnerability and Mitigation sections below.
 
 ## Requirements
 * .Net Framework 6.0 (default on most Windows computers)
