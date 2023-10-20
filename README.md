@@ -5,7 +5,7 @@ To the best of my knowlage, this doesn't break any of VRChat's rules since it do
 
 The program does request Admin privileges to run, because the programs alters your computer's `hosts` file and has to run a HTTP listener with self-signed SSL certificates. See the Uninstall instrustions below for details on how to get rid of the created certificates and `hosts` file enties.
 
-If you don't trust me and can't read&complie the code yourself, just leave and don't worry about this. This program will hopefully stop being useful once VRChat world creators learn to fix this issue in their worlds.
+If you don't trust me and can't read&complie the code yourself, just leave and don't worry about this. This program will hopefully stop being useful once VRChat world creators learn to fix this vulnerability in their worlds.
 
 If you are a world creator worried about this program or before mentioned vulnerability, check the Mitigation section below.
 
@@ -27,13 +27,22 @@ If you are a world creator worried about this program or before mentioned vulner
 * Click the *Start* button
 * Return to **VRChat**
 * Rejoin the desired world
-* Ensure the log list in the **VRChat String Downloader Override** program correctly received the webrequests
+* Check the log list in the **VRChat String Downloader Override** program to see if it received the webrequests
 * Check if the world was affacted by your changed string and have fun
 
-The created pages can be saved and loaded for later reuse.
+The created pages can be saved and loaded for later re-use.
+* Click the menu strip option: *Pages* -> *Save Pages*
+  * This will allow you to save the pages to a file
+* Click the menu strip option: *Pages* -> *Load Pages*
+  * This will allow you to load pages from a file
+
+If the String Downloader function uses URLs that aren't part of VRChat's list of trusted URL, then a custom SSL certificate will need to be made to include those hostnames.
+* Create the pages and enter the desired URLs on them
+* Click the menu strip option: *Certificates* -> *Create new Custom SSL*
 
 ## Example world
 I made an example world where you can test this vulnerability.
+* WIP
 
 ## Uninstall
 In case your want to delete everything this program has done or made on your computer.
@@ -45,15 +54,15 @@ The program should clean up this on its own whenever you start it or close it. B
 * Check for any entries that end in "# VrcStringDownloaderOverride" and delete them
 * Save the file
 
-### `netsh http * sslcert`
+### `netsh http` setting
 Having this remain on your computer shouldn't cause any issues, unless you happen to run a webserver locally on your computer.
 * Start **CMD** as administrator
-* Use the `netsh http delete sslcert ipport=0.0.0.0:443` to delete the installed certificate
+* Use the `netsh http delete sslcert ipport=0.0.0.0:443` command to delete the installed certificate
 
 ### Certificates
 Having the certificates remain on your computer after you are done using the program should cause you no issues. They are self-signed by your computer and no one else has them or uses them. You can delete them without issue, but deleting other certificates from your computer could cause issues for you.
-* The self-signed CA certificate with subject "CN = VRChat String Downloader Override CA" is stored in the "Local Computer\Trusted Root Certifiation Authorities\Certificates" folder
-* The SSL certificates with subject "CN = VRChat String Downloader Override SSL" are stored in the "Local Computer\Personal\Certificates" folder
+* The self-signed CA certificate with subject "CN = VRChat String Downloader Override CA" is stored in the `Local Computer\Trusted Root Certifiation Authorities\Certificates` folder
+* The SSL certificates with subject "CN = VRChat String Downloader Override SSL" are stored in the `Local Computer\Personal\Certificates` folder
 
 ## Vulnerability
 I might call this a *vulnerability*, but mostly it is just an oversight on the side of VRChat world creators. If you have a world that uses the String Downloader function to check if a player should have access to some exclusives or have spacial privileges, you might have inadvertently made this vulnerability in your world.
