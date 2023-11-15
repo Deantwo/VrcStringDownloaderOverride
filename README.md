@@ -42,7 +42,7 @@ If the world uses the String Downloader function with URLs that aren't part of V
 
 ## Example world
 I made an example world where you can test this vulnerability.
-* WIP
+* https://vrchat.com/home/world/wrld_e4ffcc0c-5f48-45c9-9ecc-d56f0e585b4f
 
 ## Uninstall
 In case your want to delete everything this program has done or made on your computer.
